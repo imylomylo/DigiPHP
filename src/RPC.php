@@ -109,7 +109,7 @@ class RPC {
 	public static function getBlock($hashOrHeight){
 		if (is_int($hashOrHeight)){
 			return self::call('getblock',array(
-				self::call('getBlockHash',array($hashOrHeight))			
+				self::call('getblockhash',array($hashOrHeight))			
 			));	
 		} else {
 			return self::call('getblock',array($hashOrHeight));
